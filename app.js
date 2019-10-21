@@ -13,9 +13,10 @@ module.exports = app => {
 
     // 路由挂载
     router.mount = (routes, ...handler) => {
-        let { path, method = 'POST' } = routes;
+        let { path, method = 'POST', usePush = true } = typeof routes === 'object'
+            ? routes : { path: routes };
         router[ method.toLocaleLowerCase() ](path, ...handler);
-        routes.usePush !== false && router.arrRoutes.push(routes);
+        usePush && router.arrRoutes.push(routes);
         return router;
     };
 
