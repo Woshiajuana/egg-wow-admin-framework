@@ -1,6 +1,6 @@
 {
     "name": "egg-wow-admin-framework",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "egg-wow-admin-framework",
     "dependencies": {
         "egg": "^2.3.0"
@@ -42,6 +42,7 @@
         "app",
         "config",
         "lib",
+        "app.js",
         "index.js"
     ],
     "eslintIgnore": [
